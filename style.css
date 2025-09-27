@@ -1,0 +1,16 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f4f4f4; }
+.container { max-width: 1200px; margin: auto; }
+header { background: #007bff; color: white; padding: 20px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+.status { text-align: right; }
+.status-online { font-weight: bold; }
+.panel, .analysis, .alerts, .visualization { background: white; margin: 20px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background: #f8f9fa; }
+.analysis p, .alerts p { font-weight: bold; color: #d63384; }
+.alerts ul { list-style: none; padding: 0; }
+.alerts li { margin: 10px 0; color: #dc3545; }
+.charts { display: flex; gap: 20px; flex-wrap: wrap; }
+footer { background: #6c757d; color: white; padding: 20px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+button { margin: 0 5px; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+button:hover { background: #0056b3; }
