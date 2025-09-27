@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANVITRA – E-Tongue System</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>ANVITRA – E-Tongue System</h1>
+            <div class="status">
+                <span id="status-indicator">🟢 Online</span>
+                <div id="last-calibration">Last Calibration: 28/09/2025 – 14:30</div>
+            </div>
+        </header>
+
+        <!-- Sensor Readings -->
+        <section class="panel">
+            <h2>Sensor Readings</h2>
+            <table id="sensor-table">
+                <thead>
+                    <tr><th>Taste Mapping</th><th>Sensor Used</th><th>Current Value</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Sweet</td><td>Refractive Index Sensor</td><td>1.33 RI</td><td>✅ Normal</td></tr>
+                    <tr><td>Salty</td><td>Conductivity Sensor</td><td>2.5 mS/cm</td><td>⚠️ High</td></tr>
+                    <tr><td>Sour</td><td>pH Sensor</td><td>4.2 pH</td><td>✅ Safe</td></tr>
+                    <tr><td>Bitter</td><td>Biomimetic Sensor</td><td>0.8 mV</td><td>⚠️ Detected</td></tr>
+                    <tr><td>Pungent</td><td>Temperature Sensor</td><td>32 °C</td><td>✅ Normal</td></tr>
+                    <tr><td>Astringent</td><td>Polypyrrole Sensor</td><td>0.65 mS</td><td>✅ Normal</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- AI/ML Analysis -->
+        <section class="analysis">
+            <h2>AI/ML Analysis</h2>
+            <p id="classification-result">Classification Result: Food Sample – Adulterated (High Salt & Bitter Compound)</p>
+            <p id="confidence-score">Confidence Score: 92%</p>
+        </section>
+
+        <!-- Alerts -->
+        <section class="alerts">
+            <h2>Alerts & Notifications</h2>
+            <ul id="alert-list">
+                <li>🔔 High Salt detected</li>
+                <li>🔔 Bitter compound above threshold</li>
+            </ul>
+            <p id="suggested-action">Suggested Action: Sample not safe for consumption</p>
+        </section>
+
+        <!-- Data Visualization -->
+        <section class="visualization">
+            <h2>Data Visualization</h2>
+            <div class="charts">
+                <canvas id="radarChart" width="400" height="400"></canvas>
+                <canvas id="lineChart" width="400" height="200"></canvas>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="export">
+                <button onclick="exportData('csv')">Export CSV</button>
+                <button onclick="exportData('pdf')">Export PDF</button>
+                <button onclick="cloudUpload()">Cloud Upload</button>
+            </div>
+            <div class="support">
+                <button onclick="calibrate()">Calibrate</button>
+                <button onclick="retest()">Re-Test</button>
+                <button onclick="feedback()">Feedback</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
